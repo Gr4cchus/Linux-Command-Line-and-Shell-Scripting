@@ -15,7 +15,7 @@ if [ $? -eq 0 ]; then
 else
     echo "Failed"
 fi
-# ABOVE THIS POINT
+
 hostnamectl > hostnamectl-host_information.txt
 if [ $? -eq 0 ]; then
     echo "Good:hostnamectl information obtained"
