@@ -2,43 +2,6 @@
 # read -p "Type in the linux family (redhat or debian) of the machine in lowercase: " a1
 # echo "You have choosen $a1"
 
-echo "test"
-# BELOW THIS POINT - user specific
-cat ~/.bash_history > $(whoami)-bash_history.txt
-if [ $? -eq 0 ]; then
-    echo "Good:bash_history obtained"
-else
-    echo "Failed"
-fi
-
-cat ~/.bash_logout > $(whoami)-bash_logout.txt
-if [ $? -eq 0 ]; then
-    echo "Good:bash_logout obtained"
-else
-    echo "Failed"
-fi
-
-cat ~/.bash_profile > $(whoami)-bash_profile.txt
-if [ $? -eq 0 ]; then
-    echo "Good:bash_profile obtained"
-else
-    echo "Failed"
-fi
-
-cat ~/.bashrc > $(whoami)-bashrc.txt
-if [ $? -eq 0 ]; then
-    echo "Good:bashrc obtained"
-else
-    echo "Failed"
-fi
-
-cat ~/.mysql_history > $(whoami)-mysql_history.txt
-if [ $? -eq 0 ]; then
-    echo "Good:mysql_history found"
-else
-    echo "Failed, maybe this is not a mysql database server"
-fi
-
 history > $(whoami)-command_history.txt
 if [ $? -eq 0 ]; then
     echo "Good:current user terminal history obtained"
