@@ -29,6 +29,8 @@ grep /home /etc/passwd | cut -d':' -f6 - | while IFS= read -r line; do
             cat "$FILE" > "$line$FILE.txt"
         elif [ -f "$FILE" ] && [[ "$FILE" == .emac* ]]; then
             cat "$FILE" > "$line$FILE.txt"
+        elif [ -f "$FILE" ] && [[ "$FILE" == .nan* ]]; then
+            cat "$FILE" > "$line$FILE.txt"
         fi
     done
     printf 'Found %s\n' "$line"
