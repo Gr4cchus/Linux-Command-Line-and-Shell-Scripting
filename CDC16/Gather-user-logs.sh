@@ -40,7 +40,7 @@ echo "Would you like to compress all these files for easy transfer?"
 read -p "Press y or n (lowercase): " userChoice1
 
 if [ "$userChoice1" = "y" ]; then
-    cd /home; tar cvf /home/Forencics-Logs.tar *.*
+    cd /home; tar cvf /home/Users-Forencic-Logs.tar *.*
     echo "Compression completed"
     echo
 else
