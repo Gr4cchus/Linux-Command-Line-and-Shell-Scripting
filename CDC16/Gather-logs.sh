@@ -2,7 +2,7 @@
 # read -p "Type in the linux family (redhat or debian) of the machine in lowercase: " a1
 # echo "You have choosen $a1"
 
-history > $(whoami)-command_history.txt
+history > $(whoami)-command_history.txt     # doesnt seem to work correctly
 if [ $? -eq 0 ]; then
     echo "Good:current user terminal history obtained"
 else
@@ -98,7 +98,7 @@ echo "Would you like to compress all these files for easy transfer?"
 read -p "Press y or n (lowercase): " X
 
 if [ "$X" = "y" ]; then
-    tar cvf Forencics-Logs.tar *.txt
+    tar cvf System-Forencic-Logs.tar *.txt
     echo "The End..."
 else
     echo "The End..."
