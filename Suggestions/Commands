@@ -1,0 +1,42 @@
+# verify the integrity of many installed components, providing an effective way to identify unusual or out of place files; verify all packages installed by RPM
+rpm -Va
+
+# Continued: It is also possible to specify a known good database, when the database is suspect.
+rpm --dbpath
+
+# Records information when a package is installed
+/var/log/dpkg.log
+
+# List the contents of an RPM database; note the use of a static image for ideas
+#  2012-06-12 14:48:22 install nmap <none> 5.21-1.1
+# not all packages will be listed as some are installed from source
+rpm -qa --root=/mntpath/var/lib/rpm
+
+# lastcomm helps determine when events recorded in the command history log occured, recording every command that was executed on the system along with the time and user account.
+
+# fls listing of the system
+fls -r -m "/" /dev/sda1 > fls.bodyfile
+mactime -b fls.bodyfile -d -y > Victim.timeline
+
+# status of active network connections, ip addrs, PIDs using connection
+netstat -anp
+
+# see a list of all open files and users associated with files. (lsof -i) for list of files/processes associated with network addresses
+lsof
+
+# running processes, associated user, start time, command
+ps -aux
+
+# nohup.out files? (continues script without user being logged on)
+
+# Logwatch logs - /var/spool/mail (show file creations, changes, ssh logons)
+
+# Auditd logs - /var/log/audit shows program execution, date/time, user
+
+# service startus (traditional)/etc/inittab /etc/init.d /etc/rc.d (upstart) /etc/init.conf /etc/init
+
+# mysql version
+mysql --version
+
+# get SELinux status
+getenforce
