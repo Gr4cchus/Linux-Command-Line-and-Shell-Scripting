@@ -11,6 +11,10 @@ rpm --dbpath
 #  2012-06-12 14:48:22 install nmap <none> 5.21-1.1
 # not all packages will be listed as some are installed from source
 rpm -qa --root=/mntpath/var/lib/rpm
+#yast patterns
+rpm -qa | grep "pattern*"
+# zypper pt for patterns, zypper se for packages, /var/log/zypp/history for zypper history, zypper log for zypper commands.
+
 
 # lastcomm helps determine when events recorded in the command history log occured, recording every command that was executed on the system along with the time and user account.
 
@@ -33,7 +37,7 @@ ps -aux
 
 # Auditd logs - /var/log/audit shows program execution, date/time, user
 
-# service startus (traditional)/etc/inittab /etc/init.d /etc/rc.d (upstart) /etc/init.conf /etc/init
+# service status (traditional)/etc/inittab /etc/init.d /etc/rc.d (upstart) /etc/init.conf /etc/init
 
 # mysql version
 mysql --version
