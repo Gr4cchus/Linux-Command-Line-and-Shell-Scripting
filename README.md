@@ -1,2 +1,2 @@
-# Game-Scripts
+# Shell Scripts
 My custom bash scripts
